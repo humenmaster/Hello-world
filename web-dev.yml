@@ -1,0 +1,35 @@
+server:
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: tensquareweb
+zuul:
+  routes:
+    tensquarebase:
+      path: /base/**
+      serviceId: tensquaregathering
+    tensquarearticle:
+      path: /article/**
+      serviceId: tensquarearticle
+    tensquarefriend:
+      path: /friend/**
+      serviceId: tensquarefriend
+    tensquaregathering:
+      path: /gathering/**
+      serviceId: tensquaregathering
+    tensquareqa:
+      path: /problem/**
+      serviceId: tensquareqa
+    tensquarerecruit:
+      path: /recruit/**
+      serviceId: tensquarerecruit
+    tensquarespit:
+      path: /spit/**
+      serviceId: tensquarespit
+    tensquareuser:
+      path: /user/**
+      serviceId: tensquareuser

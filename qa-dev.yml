@@ -1,0 +1,21 @@
+server: 
+  port: 8084
+spring: 
+  application:  
+    name: tensquareqa #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.52.130:3306/tensquare_qa?characterEncoding=UTF8
+    username: root
+    password: root
+  jpa: 
+    database: MySQL
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+ # 开启熔断器
+feign:
+  hystrix:
+    enabled: true

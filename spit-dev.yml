@@ -1,0 +1,13 @@
+server:
+  port: 8087
+spring:
+  application:
+    name:
+  data:
+    mongodb:
+      host: 192.168.52.130
+      port: 27017
+      database: spitdb
+  redis:
+    host: 192.168.52.130
+    port: 6379
