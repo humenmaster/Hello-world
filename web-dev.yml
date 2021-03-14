@@ -7,6 +7,9 @@ eureka:
 spring:
   application:
     name: tensquareweb
+  rabbitmq:
+    host: 192.168.52.130
+    port: 5672  
 zuul:
   routes:
     tensquarebase:
